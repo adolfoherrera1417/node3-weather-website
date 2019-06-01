@@ -11,7 +11,9 @@ const forecast = (long, lad, callback) => {
         } else {
             callback(undefined,{
                 summary: response.body.daily.data[0].summary,
-                temperature: response.body.currently.temperature
+                temperature: response.body.currently.temperature,
+                temperatureMax: response.body.daily.data[0].temperatureMax,
+                temperatureMin: response.body.daily.data[0].temperatureMin
             })
         }
     })

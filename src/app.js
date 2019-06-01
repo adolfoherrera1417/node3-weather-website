@@ -74,7 +74,9 @@ app.get('/weather', (req,res) => {
                 address: req.query.address,
                 temperature: data.temperature,
                 location,
-                summary: data.summary
+                summary: data.summary,
+                temperatureHigh: data.temperatureMax,
+                temperatureLow: data.temperatureMin
             })
             })
     })
